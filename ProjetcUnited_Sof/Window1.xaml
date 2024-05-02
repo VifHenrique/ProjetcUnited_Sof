@@ -1,0 +1,35 @@
+﻿<Window x:Class="ProjetcUnited_Sof.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetcUnited_Sof"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid x:Name="telaMenu">
+        <Button x:Name="btnCadastrar" Content="Cadastra" HorizontalAlignment="Left" Margin="11,12,0,0" VerticalAlignment="Top" Height="40" Width="121" RenderTransformOrigin="0.551,-3.875" Click="Button_Click" FontSize="18" FontFamily="Segoe UI Black"/>
+        <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="152,11,0,0" VerticalAlignment="Top" Height="43" Width="114" RenderTransformOrigin="0.551,-3.875" Click="Button_Click_1" FontFamily="Segoe UI Black" FontSize="18"/>
+        <Button x:Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="284,11,0,0" VerticalAlignment="Top" Height="43" Width="114" RenderTransformOrigin="0.551,-3.875" Click="Button_Click_1" FontSize="18" FontFamily="Segoe UI Black"/>
+        <DataGrid x:Name="tabDados" SelectionChanged="DataGrid_SelectionChanged" Margin="0,162,230,3" RenderTransformOrigin="0.5,0.5" FontFamily="Cascadia Code SemiBold" FontSize="18">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.147"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.497"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Código" Binding="{Binding Codigo}" />
+                <DataGridTextColumn Header="Modelo" Binding="{Binding Modelo}" />
+                <DataGridTextColumn Header="Marca" Binding="{Binding Marca}" />
+                <DataGridTextColumn Header="Valor" Binding="{Binding Valor}" />
+                <DataGridTextColumn Header="Estoque" Binding="{Binding Estoque}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="txtLabel" Content="Pesquisa" HorizontalAlignment="Left" Margin="35,117,0,0" VerticalAlignment="Top" Width="55"/>
+        <TextBox x:Name="txtPesquisaCodigo" HorizontalAlignment="Left" Margin="102,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="39" FontSize="14" FontFamily="Cascadia Code SemiBold" Cursor="Arrow"/>
+        <Button x:Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Margin="287,110,0,0" VerticalAlignment="Top" Height="43" Width="114" RenderTransformOrigin="0.551,-3.875" Click="btnPesquisar_Click" FontSize="18" FontFamily="Segoe UI Black"/>
+    </Grid>
+</Window>
+
